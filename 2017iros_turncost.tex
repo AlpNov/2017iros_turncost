@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \thanks command
+
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\title{\LARGE \bf
+Subset coverage algorithm for a UAV with turn cost, include physical experiments
+}
+
+
+\author{Albert Author$^{1}$ and Bernard D. Researcher$^{2}$% <-this % stops a space
+\thanks{*This work was not supported by any organization}% <-this % stops a space
+\thanks{$^{1}$Albert Author is with Faculty of Electrical Engineering, Mathematics and Computer Science,
+        University of Twente, 7500 AE Enschede, The Netherlands
+        {\tt\small albert.author@papercept.net}}%
+\thanks{$^{2}$Bernard D. Researcheris with the Department of Electrical Engineering, Wright State University,
+        Dayton, OH 45435, USA
+        {\tt\small b.d.researcher@ieee.org}}%
+}
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+Coverage algorithm is a well researched area in path planning. However, most technique focus only on distance cost, but ignore turn cost, which is signficant. Introducing turn cost signficantly increases computation time. Planning a coverage path accounting for turn cost is of interest to UAV flying in obstacle filled environments, or in missions where certain sub-areas are of higher interest than the rest.
+	
+In this paper, we present an algorithm for subset coverage, or partial coverage with penalty for high interest areas. Our algorithm can work in grid graphs as well as polygonal environments. We then verify the algorithm's output with physical experiment using our hexacopter. We obtain the turn cost through physical experiments, measuring the time and energy cost of making 90 degree turns and 180 degree turns, as well as the decelerating and accelerating period. Our results can be used on our mosquitto-zapping UAV, where our hexacopter carry an electrified net used to eleminate mosquito and collect information on their population.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{introduction}
+
+\input{related}
+
+\input{turncost}
+
+\input{algorithm}
+
+\input{conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{cite}
+
+\end{document}
