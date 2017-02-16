@@ -2,11 +2,21 @@
 
 Coverage path planning is a well researched problem with many applications in robotics.
 Cleaning (vacuuming) robot such as the iRobot Roomba rely on these algorithm to ensure that they cover as much area as possible before running out of battery.
-Our interest for this area concerns with planning a coverage path for an autonomous unmanned aerial vehicle (UAV) equipped with an electrified net to eliminate and take survey of the mosquito population in the area, see Fig. (mos. drone. pic).
+Our interest for this area concerns with planning a coverage path for an autonomous unmanned aerial vehicle (UAV) equipped with an electrified net to eliminate and take survey of the mosquito population in the area, see Fig.~\ref{fig:mosuav}.
 However, existing methods focus on minimzing distance travelled, with minimal attention to the cost of turning the robot.
 For most vehicles, travelling in a straight line is much less costly than travelling in a zig zag path of the same length.
+
+\begin{figure}
+	\centering
+	\begin{overpic}[width=0.9\columnwidth]{pictures/intro_mosquito_uav.jpg}
+	\end{overpic}
+	\caption{\label{fig:mosuav}
+		Our mosquito net equipped UAV, we wish to find a better coverage algorithm for this UAV.
+	}
+\end{figure}
 
 In \cite{krupkethesis}, Krupke et al. examined different algorithms and heuristics for planning a coverage path while accounting for turn cost.
 Realistic data for the energy used during the turns are needed, however. 
 In this paper, we will measure the actual energy used while the UAV changes traveling direction, compared to a straight line path.
 Addtionally, with the turn cost obtained, we will use (one or more of the methods listed) to generate a flight plan for an autonomous multicopter to verify their algorithms.
+

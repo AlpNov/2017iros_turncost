@@ -2,6 +2,26 @@
 
 \subsection{MODEL}
 
+Model for efficiency of a quad rotor. Some possible sources are \cite{driessens2013}.
+
+
 \subsection{EXPERIMENTS}
 
+Due to the high variability of a quadrotor's configuration, such as the efficiency curves of the motors used, we will measure the energy used during turning of our hexacopter directly.
+To comply with our algorithm's grid base approach, we will measure the energy used by our hexacopter as it travels over three equal-sized grids in flight. See Fig.~\ref{fig:gridturn}.
+
+To measure the energy cost, we use a Raspberry Pi with an ADC logging chip to log the voltage accross and current through the battery of our hexacopter during flight.
+This log can then be synchronized with the GPS log recorded by our quadcopter during the flight.
+
+\begin{figure}
+	\centering
+	\begin{overpic}[width=0.9\columnwidth]{pictures/turncost_grid_turn.pdf}
+	\end{overpic}
+	\caption{\label{fig:gridturn}
+		The three travel path during which we will measure energy
+		a) a straight path through three grids
+		b) a 90 degree turn
+		c) a 180 degree turn
+	}
+\end{figure}
 
