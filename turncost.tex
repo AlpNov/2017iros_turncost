@@ -10,9 +10,6 @@ Model for efficiency of a quad rotor. Some possible sources are \cite{driessens2
 Due to the high variability of a quadrotor's configuration, such as the efficiency curves of the motors used, we will measure the energy used during turning of our hexacopter directly.
 To comply with our algorithm's grid base approach, we will measure the energy used by our hexacopter as it travels over three equal-sized grids in flight. See Fig.~\ref{fig:gridturn}.
 
-To measure the energy cost, we use a Raspberry Pi with an ADC logging chip to log the voltage accross and current through the battery of our hexacopter during flight.
-This log can then be synchronized with the GPS log recorded by our quadcopter during the flight.
-
 \begin{figure}
 	\centering
 	\begin{overpic}[width=0.9\columnwidth]{pictures/turncost_grid_turn.pdf}
@@ -25,3 +22,23 @@ This log can then be synchronized with the GPS log recorded by our quadcopter du
 	}
 \end{figure}
 
+To measure the energy cost, we use a Raspberry Pi with an ADC logging chip to log the voltage accross and current through the battery of our hexacopter during flight.
+This log can then be synchronized with the GPS log recorded by our hexacopter during the flight.
+
+\subsection{DATA}
+
+Fig.~\ref{fig:turnlog_90} shows the gps log and power usage log during our 90 degree flight.
+
+NOTE: I want to combine these two graphs (not the actual graphs right now, need to seperate the GPS log of all the flights) into a 3D GPS log with power usage as either color or altitude.
+Additionally, it seems that there is no real power spikes during turning, however, the deceleration and acceleration time increase power usage vs. travel distance.
+I will need to examine this. 
+
+\begin{figure}
+	\centering
+	\begin{overpic}[width=0.9\columnwidth]{pictures/turncost_log.pdf}
+	\end{overpic}
+	\caption{\label{fig:turnlog_90}
+		a) our power log during our 90 degree turn path flight
+		b) our GPS log
+	}
+\end{figure}
